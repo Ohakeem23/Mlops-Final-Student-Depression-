@@ -1,0 +1,4 @@
+Model,Prediction,Confidence,Gender,Age,City,Profession,Academic Pressure,Work Pressure,CGPA,Study Satisfaction,Job Satisfaction,Sleep Duration,Dietary Habits,Degree,Have you ever had suicidal thoughts ?,Work/Study Hours,Financial Stress,Family History of Mental Illness,Total Pressure
+LightGBM,Not Depressed,97.92,Male,22,cairo,Student,1,1,4.0,5,5,9,2,MSc,No,2,1,No,2.0
+LightGBM,Not Depressed,82.2,Male,23,cairo,Unemployed,2,3,2.6,2,2,6,3,BSc,No,5,2,No,5.0
+LightGBM,Depressed,65.66,Male,27,Mumbai,Student,3,4,2,1,1,6,3,BSc,No,6,5,Yes,7.0

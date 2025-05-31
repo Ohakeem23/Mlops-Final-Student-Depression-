@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Depression Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="text-center mb-4">Student Depression Predictor</h1>
+
+  <div class="alert alert-warning">
+    <strong>Instructions:</strong>
+    <ul class="mb-0">
+      <li>All satisfaction/pressure scores range from <strong>1 (Low)</strong> to <strong>5 (High)</strong></li>
+      <li>CGPA is on a <strong>0.0 – 4.0</strong> scale</li>
+      <li>Sleep and Work/Study durations are in <strong>hours per day</strong></li>
+      <li><strong>Total Pressure</strong> is auto-calculated from Academic + Work Pressure</li>
+    </ul>
+  </div>
+
+  <form method="POST">
+    <div class="row g-3">
+
+      <!-- Gender -->
+      <div class="col-md-4">
+        <label class="form-label">Gender</label>
+        <select class="form-select" name="Gender" required>
+          <option value="">Select...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <!-- Age -->
+      <div class="col-md-4">
+        <label class="form-label">Age</label>
+        <input type="number" min="10" max="100" step="1" class="form-control" name="Age" placeholder="e.g. 22" required>
+      </div>
+
+      <!-- City -->
+      <div class="col-md-4">
+        <label class="form-label">City</label>
+        <input type="text" class="form-control" name="City" placeholder="e.g. Cairo" required>
+      </div>
+
+      <!-- Profession -->
+      <div class="col-md-4">
+        <label class="form-label">Profession</label>
+        <select class="form-select" name="Profession" required>
+          <option value="">Select...</option>
+          <option value="Student">Student</option>
+          <option value="Freelancer">Freelancer</option>
+          <option value="Employee">Employee</option>
+          <option value="Unemployed">Unemployed</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Academic Pressure -->
+      <div class="col-md-4">
+        <label class="form-label">Academic Pressure</label>
+        <input type="number" min="1" max="5" step="1" class="form-control" name="Academic Pressure" placeholder="1-5" required>
+      </div>
+
+      <!-- Work Pressure -->
+      <div class="col-md-4">
+        <label class="form-label">Work Pressure</label>
+        <input type="number" min="1" max="5" step="1" class="form-control" name="Work Pressure" placeholder="1-5" required>
+      </div>
+
+      <!-- CGPA -->
+      <div class="col-md-4">
+        <label class="form-label">CGPA (out of 4)</label>
+        <input type="number" min="0.0" max="4.0" step="0.01" class="form-control" name="CGPA" placeholder="e.g. 3.5" required>
+      </div>
+
+      <!-- Study Satisfaction -->
+      <div class="col-md-4">
+        <label class="form-label">Study Satisfaction</label>
+        <input type="number" min="1" max="5" step="1" class="form-control" name="Study Satisfaction" placeholder="1-5" required>
+      </div>
+
+      <!-- Job Satisfaction -->
+      <div class="col-md-4">
+        <label class="form-label">Job Satisfaction</label>
+        <input type="number" min="1" max="5" step="1" class="form-control" name="Job Satisfaction" placeholder="1-5" required>
+      </div>
+
+      <!-- Sleep Duration -->
+      <div class="col-md-4">
+        <label class="form-label">Sleep Duration (hours/day)</label>
+        <input type="number" min="0" max="24" step="0.1" class="form-control" name="Sleep Duration" placeholder="e.g. 6.5" required>
+      </div>
+
+      <!-- Dietary Habits -->
+      <div class="col-md-4">
+        <label class="form-label">Dietary Habits</label>
+        <select class="form-select" name="Dietary Habits" required>
+          <option value="">Select...</option>
+          <option value="1">Healthy</option>
+          <option value="2">Moderate</option>
+          <option value="3">Unhealthy</option>
+        </select>
+      </div>
+
+      <!-- Degree -->
+      <div class="col-md-4">
+        <label class="form-label">Degree</label>
+        <select class="form-select" name="Degree" required>
+          <option value="">Select...</option>
+          <option value="BSc">BSc</option>
+          <option value="MSc">MSc</option>
+          <option value="PhD">PhD</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Suicidal Thoughts -->
+      <div class="col-md-4">
+        <label class="form-label">Have you ever had suicidal thoughts?</label>
+        <select class="form-select" name="Have you ever had suicidal thoughts ?" required>
+          <option value="">Select...</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <!-- Work/Study Hours -->
+      <div class="col-md-4">
+        <label class="form-label">Work/Study Hours</label>
+        <input type="number" min="0" max="24" step="0.1" class="form-control" name="Work/Study Hours" placeholder="e.g. 5.0" required>
+      </div>
+
+      <!-- Financial Stress -->
+      <div class="col-md-4">
+        <label class="form-label">Financial Stress</label>
+        <input type="number" min="1" max="5" step="1" class="form-control" name="Financial Stress" placeholder="1-5" required>
+      </div>
+
+      <!-- Family History of Mental Illness -->
+      <div class="col-md-4">
+        <label class="form-label">Family History of Mental Illness</label>
+        <select class="form-select" name="Family History of Mental Illness" required>
+          <option value="">Select...</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+      <a href="/dashboard" class="btn btn-success">Dashboard</a>
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
