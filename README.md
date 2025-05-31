@@ -58,19 +58,10 @@ This dataset is ethically collected and anonymized for responsible use in mental
 - HTML templates (index.html, results.html, dashboard.html) manage page structure and flow.
 
 ## ⚙ Setup Instructions
-/your-project-folder
-│
-├── app.py
-├── student_depression_dataset.csv
-├── predictions.csv
-├── Model.ipynb
-├── README.md
-├── requirements.txt
-│
-├── /templates
-│   ├── index.html
-│   ├── results.html
-│   └── dashboard.html
+Folder structure 
+![image](https://github.com/user-attachments/assets/ca56fb88-a892-445b-9375-f641eb779808)
 
+To launch the Flaks App in the terminal enter:
+Python app.py
 
 
