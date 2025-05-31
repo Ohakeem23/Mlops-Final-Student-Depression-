@@ -59,6 +59,8 @@ This dataset is ethically collected and anonymized for responsible use in mental
 
 ## ⚙ Setup Instructions
 Folder structure 
+
+
 ![image](https://github.com/user-attachments/assets/ca56fb88-a892-445b-9375-f641eb779808)
 
 To launch the Flaks App in the terminal enter:
