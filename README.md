@@ -79,7 +79,7 @@ pip install -r requirements.txt
 
 ![image](https://github.com/user-attachments/assets/c241a75b-e673-44be-aaa9-9892a07b4b87)
 
-### Launvh Flask App
+### Launch Flask App
 
 
 ### python app.py
