@@ -91,5 +91,5 @@ pip install -r requirements.txt
 ### http://127.0.0.1:5000 
 
 
-# or click on the link through the terminal
+### or click on the link through the terminal
  
