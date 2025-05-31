@@ -82,13 +82,13 @@ pip install -r requirements.txt
 ### Launvh Flask App
 
 
-# python app.py
+### python app.py
 
 
-# Then open your browser and go to:
+### Then open your browser and go to:
 
 
-# http://127.0.0.1:5000 
+### http://127.0.0.1:5000 
 
 
 # or click on the link through the terminal
